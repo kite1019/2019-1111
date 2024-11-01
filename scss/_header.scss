@@ -1,0 +1,130 @@
+.header_m {
+	width: 100%;
+	height: 40px;
+	background-color: #d7000f;
+	padding: 0;
+	position: relative;
+	z-index: 1;
+	@include box-shadow(0 0 10px rgba(0, 0, 0, .25));
+	.pclogo {
+		width: 180px;
+		position: relative;
+	}
+	.pclogo::after {
+		content: '';
+		position: absolute;
+		right: -20px;
+		top: 3px;
+		width: 1px;
+		height: 80%;
+		background-color: #fff;
+	}
+	a.mb {
+		display: none;
+	}
+}
+#navTop {
+	width: calc(100% - 240px);
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	.swiper-slide {
+		cursor: pointer;
+		text-align: center;
+		position: relative;
+		span {
+			display: block;
+			width: 100%;
+			padding: 4px 0 5px;
+			@include border-radius(10px);
+		}
+	}
+	.active-nav span {
+		color: #fff;
+		position: relative;
+		background: #039ce1 !important;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.header_m .container {
+		max-width: 95%;
+		padding: 0;
+		height: 100%;
+	}
+
+}
+@media only screen and (max-width: 1023px) {
+	.header_m {
+		height: 35px;
+		overflow: hidden;
+		.pclogo {
+			width: 150px;
+		}
+	}
+	#navTop {
+		font-size: 14px;
+		width: calc(100% - 200px);
+		margin: 0;
+	}
+}
+@media only screen and (max-width: 991px) {
+	.header_m a.pc {
+		display: block !important;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.header_m {
+		position: fixed;
+		top: 0;
+		height: auto;
+		a.pc {
+			display: none !important;
+		}
+		.pclogo {
+			width: 100%;
+			background-color: #fff;
+			text-align: center;
+			line-height: 1;
+			padding: 6px 0 4px;
+			img {
+				width: 150px;
+				margin: 0 auto;
+			}
+		}
+		.container {
+			display: block !important;
+			margin: 0 auto;
+			width: 100%;
+			max-width: none;
+		}
+		a.pc {
+			display: none;
+		}
+		a.mb {
+			display: block;
+		}
+	}
+	#navTop {
+		width: 97%;
+		padding: 8px 0 8px;
+		margin-left: 1.5%;
+		* {
+			font-weight: 500;			
+		}
+		.swiper-slide {
+			// line-height: 30px;
+		}
+	}
+}
+@media only screen and (max-width: 767px) {
+	.header_m .pclogo img {
+		width: 130px;
+	}
+	#navTop {
+		width: 95%;
+		margin-left: 2.5%;
+		// padding: 2px 0;
+	}
+}

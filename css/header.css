@@ -1,0 +1,115 @@
+.header_m {
+  height: 40px;
+  background-color: #fff;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  height: 40px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
+  .header_m .pclogo {
+    width: 100px; }
+    .header_m .pclogo img {
+      height: 40px;
+      width: auto;
+      display: block; }
+
+.header {
+  height: 40px;
+  background-color: #fff;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
+  .header li {
+    position: relative; }
+    .header li a, .header li span {
+      display: block; }
+  .header li img {
+    height: 40px;
+    width: auto;
+    display: block; }
+  .header a, .header .appDonload span {
+    display: block;
+    color: #a9a9a9;
+    text-decoration: none; }
+  .header li.note,
+  .header li.appDonload,
+  .header li.social {
+    padding: 17px 2px 0; }
+  .header li.appDonload {
+    padding: 17px 7px 0;
+    cursor: pointer; }
+    .header li.appDonload img {
+      display: block;
+      width: 100%;
+      height: auto; }
+    .header li.appDonload span {
+      color: #dd0202; }
+    .header li.appDonload .appQRcode {
+      position: absolute;
+      z-index: 9999;
+      top: 100%;
+      width: 160px;
+      right: -9px;
+      padding: 8px;
+      background: #fff;
+      -webkit-box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.15);
+      box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.15);
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      display: none; }
+  .header li.appDonload::before, .header li.appDonload::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+    bottom: 6px;
+    left: 2px; }
+  .header li.appDonload::after {
+    left: auto;
+    right: 2px; }
+  .header li.appDonload:hover .appQRcode {
+    display: block; }
+  .header li.appDonload:hover span {
+    color: #039ce1; }
+  .header li.icons {
+    padding: 2px 0 0 2px; }
+    .header li.icons a {
+      display: inline-block; }
+    .header li.icons img {
+      width: 25px; }
+  .header .mb {
+    display: none !important; }
+    .header .mb img {
+      height: 25px; }
+
+@media only screen and (max-width: 1024px) {
+  .header li {
+    margin-top: -2px;
+    -webkit-transform: scale(0.92);
+    -moz-transform: scale(0.92);
+    -ms-transform: scale(0.92);
+    -o-transform: scale(0.92);
+    transform: scale(0.92); }
+  .header li:nth-child(1) {
+    margin-right: -30px; }
+  .header li.appDonload .appQRcode {
+    margin-top: 2px; } }
+
+@media only screen and (max-width: 1023px) {
+  .header {
+    -webkit-box-shadow: 0;
+    box-shadow: 0; }
+    .header .pc {
+      display: none; }
+    .header .mb {
+      display: inherit !important;
+      margin: 0; } }
